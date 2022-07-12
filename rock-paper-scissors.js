@@ -22,24 +22,21 @@ function playRound(playerSelection, computerSelection) {
     computerSelection = computerPlay();
     console.log(`${playerSelection}, ${computerSelection}`)
     if (playerSelection === computerSelection) {
-        return `Draw! Both players chose ${computerSelection}`;
+        return `Draw! Both players chose ${computerSelection.toLowerCase()}`;
+    } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
+        return `${playerWin} ${rockWin}`;
+    } else if (playerSelection === "Paper" && computerSelection === "Rock") {
+        return `${playerWin} ${paperWin}`;
+    } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+        return `${playerWin} ${scissorsWin}`;
+    } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+        return `${computerWin} ${rockWin}`;
+    } else if (playerSelection === "Rock" && computerSelection === "Paper") {
+        return `${computerWin} ${paperWin}`;
+    } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+        return `${computerWin} ${scissorsWin}`;
     } else {
-        switch (playerSelection, computerSelection) {
-            case "Scissors", "Paper":
-                return `${playerWin} ${scissorsWin}`;
-            case "Rock", "Scissors":
-                return `${playerWin} ${rockWin}`;
-            case "Paper", "Rock":
-                return `${playerWin} ${paperWin}`;
-            case "Paper", "Scissors":
-                return `${computerWin} ${scissorsWin}`;
-            case "Scissors", "Rock":
-                return `${computerWin} ${rockWin}`;
-            case "Rock", "Paper":
-                return `${computerWin} ${paperWin}`;
-            default:
-                return "Try Again!";
-        }
+        return "Try Again!";
     }
 }
 
