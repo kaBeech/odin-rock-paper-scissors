@@ -68,7 +68,7 @@ function playRound(playerSelection, computerSelection) {
         return "10";
     } else {
         console.log("Try Again!");
-        playRound();
+        return (playRound());
     }
 }
 
