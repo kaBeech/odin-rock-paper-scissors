@@ -25,6 +25,7 @@ function game() {
     playerWins = 0;
     for (let i = 0; i < 5; i++) {
         playRound();
+        console.log(`Score: ${playerWins} to ${computerWins}`)     
     }
     if (computerWins > playerWins) {
         console.log(`Computer wins! ${computerWins} to ${playerWins}`);
@@ -32,14 +33,14 @@ function game() {
         console.log(`Player wins! ${playerWins} to ${computerWins}`);
     } else {
         console.log(`Everyone wins! ${computerWins} to ${playerWins}`);
-    }
+    };
 }
 
 function playRound(playerSelection, computerSelection) {
     playerSelection = prompt("Choose your fate!");
     playerSelection = capitalize(playerSelection);
     computerSelection = computerPlay();
-    console.log(`${playerSelection}, ${computerSelection}`)
+    // console.log(`${playerSelection}, ${computerSelection}`)
     if (playerSelection === computerSelection) {
         console.log(`Everyone wins! Both players chose ${computerSelection.toLowerCase()}`);
         playerWins += 1;
