@@ -2,8 +2,11 @@
 const rockWin = "Rock smashes scissors";
 const paperWin = "Paper covers rock";
 const scissorsWin = "Scissors cut paper";
-const computerWin = "Computer wins!"
-const playerWin = "You win!"
+const computerWin = "Computer wins!";
+const playerWin = "You win!";
+let playerWins = 0;
+let computerWins = 0;
+
 
 function computerPlay() {
     let selection = Math.floor(Math.random() * 3);
@@ -17,27 +20,49 @@ function computerPlay() {
     }
 }
 
+function game() {
+    computerWins = 0;
+    playerWins = 0;
+    for (let i = 0; i < 5; i++) {
+        playRound();
+    }
+    if (computerWins > playerWins) {
+        console.log(`Computer wins! ${computerWins} to ${playerWins}`);
+    } else if (playerWins > computerWins) {
+        console.log(`Player wins! ${playerWins} to ${computerWins}`);
+    } else {
+        console.log(`Everyone wins! ${computerWins} to ${playerWins}`);
+    }
+}
+
 function playRound(playerSelection, computerSelection) {
     playerSelection = prompt("Choose your fate!");
     playerSelection = capitalize(playerSelection);
     computerSelection = computerPlay();
     console.log(`${playerSelection}, ${computerSelection}`)
     if (playerSelection === computerSelection) {
-        return `Everyone wins! Both players chose ${computerSelection.toLowerCase()}`;
+        console.log(`Everyone wins! Both players chose ${computerSelection.toLowerCase()}`);
     } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
-        return `${playerWin} ${rockWin}`;
+        playerWins += 1;
+        console.log(`${playerWin} ${rockWin}`);
     } else if (playerSelection === "Paper" && computerSelection === "Rock") {
-        return `${playerWin} ${paperWin}`;
+        playerWins += 1;
+        console.log(`${playerWin} ${paperWin}`);
     } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-        return `${playerWin} ${scissorsWin}`;
+        playerWins += 1;
+        console.log(`${playerWin} ${scissorsWin}`);
     } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
-        return `${computerWin} ${rockWin}`;
+        computerWins += 1;
+        console.log(`${computerWin} ${rockWin}`);
     } else if (playerSelection === "Rock" && computerSelection === "Paper") {
-        return `${computerWin} ${paperWin}`;
+        computerWins += 1;
+        console.log(`${computerWin} ${paperWin}`);
     } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
-        return `${computerWin} ${scissorsWin}`;
+        computerWins += 1;
+        console.log(`${computerWin} ${scissorsWin}`);
     } else {
-        return "Try Again!";
+        console.log("Try Again!");
+        playRound();
     }
 }
 
