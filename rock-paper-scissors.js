@@ -4,9 +4,6 @@ const paperWin = "Paper covers rock";
 const scissorsWin = "Scissors cut paper";
 const computerWin = "Computer wins!";
 const playerWin = "You win!";
-let playerWins = 0;
-let computerWins = 0;
-
 
 function computerPlay() {
     let selection = Math.floor(Math.random() * 3);
@@ -21,12 +18,19 @@ function computerPlay() {
 }
 
 function game() {
-    computerWins = 0;
-    playerWins = 0;
-    for (let i = 0; i < 5; i++) {
-        playRound();
+    let computerWins = 0;
+    let playerWins = 0;
+    for (let i = 0, score = "00"; i < 5; i++) {
+        score = playRound();
+        computerWins += +score[0];
+        playerWins += +score[1];
         console.log(`Score: ${playerWins} to ${computerWins}`)     
     }
+    showResult(computerWins, playerWins)
+}
+
+
+function showResult(computerWins, playerWins) {
     if (computerWins > playerWins) {
         console.log(`Computer wins! ${computerWins} to ${playerWins}`);
     } else if (playerWins > computerWins) {
@@ -43,26 +47,25 @@ function playRound(playerSelection, computerSelection) {
     // console.log(`${playerSelection}, ${computerSelection}`)
     if (playerSelection === computerSelection) {
         console.log(`Everyone wins! Both players chose ${computerSelection.toLowerCase()}`);
-        playerWins += 1;
-        computerWins += 1;
+        return "11";
     } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
-        playerWins += 1;
         console.log(`${playerWin} ${rockWin}`);
+        return "01";
     } else if (playerSelection === "Paper" && computerSelection === "Rock") {
-        playerWins += 1;
         console.log(`${playerWin} ${paperWin}`);
+        return "01";
     } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-        playerWins += 1;
         console.log(`${playerWin} ${scissorsWin}`);
+        return "01";
     } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
-        computerWins += 1;
         console.log(`${computerWin} ${rockWin}`);
+        return "10";
     } else if (playerSelection === "Rock" && computerSelection === "Paper") {
-        computerWins += 1;
         console.log(`${computerWin} ${paperWin}`);
+        return "10";
     } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
-        computerWins += 1;
         console.log(`${computerWin} ${scissorsWin}`);
+        return "10";
     } else {
         console.log("Try Again!");
         playRound();
