@@ -1,9 +1,8 @@
+const paperWin = "Paper covers rock";
+const scissorsWin = "Scissors cut paper";
+const rockWin = "Rock smashes scissors";
+
 function playRound(playerSelection, computerSelection) {
-    const rockWin = "Rock smashes scissors";
-    const paperWin = "Paper covers rock";
-    const scissorsWin = "Scissors cut paper";
-    const computerWin = "Computer wins!";
-    const playerWin = "You win!";
     playerSelection = prompt("Choose your fate!");
     playerSelection = capitalize(playerSelection);
     computerSelection = computerPlay();
@@ -11,22 +10,22 @@ function playRound(playerSelection, computerSelection) {
         console.log(`Everyone wins! Both players chose ${computerSelection.toLowerCase()}`);
         return "11";
     } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
-        console.log(`${playerWin} ${rockWin}`);
+        console.log(`You win! ${rockWin}`);
         return "01";
     } else if (playerSelection === "Paper" && computerSelection === "Rock") {
-        console.log(`${playerWin} ${paperWin}`);
+        console.log(`You win! ${paperWin}`);
         return "01";
     } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-        console.log(`${playerWin} ${scissorsWin}`);
+        console.log(`You win! ${scissorsWin}`);
         return "01";
     } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
-        console.log(`${computerWin} ${rockWin}`);
+        console.log(`Computer wins! ${rockWin}`);
         return "10";
     } else if (playerSelection === "Rock" && computerSelection === "Paper") {
-        console.log(`${computerWin} ${paperWin}`);
+        console.log(`Computer wins! ${paperWin}`);
         return "10";
     } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
-        console.log(`${computerWin} ${scissorsWin}`);
+        console.log(`Computer wins! ${scissorsWin}`);
         return "10";
     } else {
         console.log("Try Again!");
