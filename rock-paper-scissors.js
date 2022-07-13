@@ -37,14 +37,14 @@ function showResult(computerWins, playerWins) {
 }
 
 function playRound(playerSelection, computerSelection) {
-    playerSelection = prompt("Choose your fate!");
-    playerSelection = capitalize(playerSelection);
-    computerSelection = computerPlay();
     const rockWin = "Rock smashes scissors";
     const paperWin = "Paper covers rock";
     const scissorsWin = "Scissors cut paper";
     const computerWin = "Computer wins!";
     const playerWin = "You win!";
+    playerSelection = prompt("Choose your fate!");
+    playerSelection = capitalize(playerSelection);
+    computerSelection = computerPlay();
     if (playerSelection === computerSelection) {
         console.log(`Everyone wins! Both players chose ${computerSelection.toLowerCase()}`);
         return "11";
