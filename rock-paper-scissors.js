@@ -42,6 +42,8 @@ function playRound(playerSelection, computerSelection) {
     console.log(`${playerSelection}, ${computerSelection}`)
     if (playerSelection === computerSelection) {
         console.log(`Everyone wins! Both players chose ${computerSelection.toLowerCase()}`);
+        playerWins += 1;
+        computerWins += 1;
     } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
         playerWins += 1;
         console.log(`${playerWin} ${rockWin}`);
