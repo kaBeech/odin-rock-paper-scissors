@@ -18,11 +18,12 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
+    playerSelection = prompt("Choose your fate!");
     playerSelection = capitalize(playerSelection);
     computerSelection = computerPlay();
     console.log(`${playerSelection}, ${computerSelection}`)
     if (playerSelection === computerSelection) {
-        return `Draw! Both players chose ${computerSelection.toLowerCase()}`;
+        return `Everyone wins! Both players chose ${computerSelection.toLowerCase()}`;
     } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
         return `${playerWin} ${rockWin}`;
     } else if (playerSelection === "Paper" && computerSelection === "Rock") {
