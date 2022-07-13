@@ -1,9 +1,5 @@
 
-const rockWin = "Rock smashes scissors";
-const paperWin = "Paper covers rock";
-const scissorsWin = "Scissors cut paper";
-const computerWin = "Computer wins!";
-const playerWin = "You win!";
+
 
 function computerPlay() {
     let selection = Math.floor(Math.random() * 3);
@@ -44,7 +40,11 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = prompt("Choose your fate!");
     playerSelection = capitalize(playerSelection);
     computerSelection = computerPlay();
-    // console.log(`${playerSelection}, ${computerSelection}`)
+    const rockWin = "Rock smashes scissors";
+    const paperWin = "Paper covers rock";
+    const scissorsWin = "Scissors cut paper";
+    const computerWin = "Computer wins!";
+    const playerWin = "You win!";
     if (playerSelection === computerSelection) {
         console.log(`Everyone wins! Both players chose ${computerSelection.toLowerCase()}`);
         return "11";
