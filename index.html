@@ -7,7 +7,22 @@
     <title>Rock Paper Scissors</title>
     <script src="./rock-paper-scissors.js" defer></script>
 </head>
-<body>
-    
+<body class="flex column">
+    <h1>SCORE</h1>
+    <div class="scoreboard flex column">
+        <div class="players flex">
+            <h3>HUMAN PLAYER</h3>
+            <h3>COMPUTER PLAYER</h3>
+        </div>
+        <h1 class="score">0 - 0</h1>
+        <h3>BEST OF FIVE</h3>        
+    </div>
+    <h3 class="matchResult"></h3>
+    <h2>CHOOSE YOUR FATE!</h2>
+    <div class="playerChoices flex">
+        <button class="playerSelection" id="rock"></button>
+        <button class="playerSelection" id="paper"></button>
+        <button class="playerSelection" id="Scissors"></button>
+    </div>
 </body>
 </html>
