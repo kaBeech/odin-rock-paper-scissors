@@ -1,0 +1,37 @@
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+.spaceAround {
+    width: 100%;
+    justify-content: space-around;
+}
+
+body {
+    background-color: #333;
+    color: #ddd;
+}
+
+#scoreboard {
+    /* align-items: stretch; */
+    width: 480px;
+    border-style: solid;
+}
+
+#players . ,
+#score . {
+    width: 30%;
+}
+
+#playerChoices {
+    justify-content: center;
+    gap: 32px;
+}

@@ -5,24 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="./rock-paper-scissors.js" defer></script>
 </head>
-<body class="flex column">
+<body class="flex column alignCenter">
+    <h1>ROCK! PAPER! SCISSORS!</h1>
     <h1>SCORE</h1>
-    <div class="scoreboard flex column">
-        <div class="players flex">
+    <div id="scoreboard" class="flex column alignCenter">
+        <div id="players" class="flex spaceAround">
             <h3>HUMAN PLAYER</h3>
+            <div class="spacer"></div>
             <h3>COMPUTER PLAYER</h3>
         </div>
-        <h1 class="score">0 - 0</h1>
+        <div id="score" class="flex spaceAround">
+            <h1 id="humanScore">0</h1>
+            <h1>-</h1>
+            <h1 id="computerScore">0</h1>
+        </div>
         <h3>BEST OF FIVE</h3>        
     </div>
-    <h3 class="matchResult"></h3>
+    <h3 id="matchResult"></h3>
     <h2>CHOOSE YOUR FATE!</h2>
-    <div class="playerChoices flex">
-        <button class="playerSelection" id="rock">ROCK</button>
-        <button class="playerSelection" id="paper">PAPER</button>
-        <button class="playerSelection" id="scissors">SCISSORS</button>
+    <div id="playerChoices" class="flex">
+        <button id="rock" class="playerSelection">ROCK</button>
+        <button id="paper" class="playerSelection">PAPER</button>
+        <button id="scissors" class="playerSelection">SCISSORS</button>
     </div>
 </body>
 </html>
