@@ -16,7 +16,7 @@
 }
 
 body {
-    background-color: #333;
+    background-color: #222;
     color: #ddd;
 }
 
@@ -24,6 +24,7 @@ body {
     /* align-items: stretch; */
     width: 480px;
     border-style: solid;
+    margin: 0 8px;
 }
 
 #players . ,
@@ -44,6 +45,16 @@ body {
 }
 
 .humanSelection {
-    background-color: 111;
+    background-color: #111;
     color: #ddd;
+    height: 96px;
+    aspect-ratio: 1;
+}
+
+#resultsLeft . {
+    text-align: right;
+}
+
+.textAlignRight {
+    text-align: right;
 }

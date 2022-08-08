@@ -11,22 +11,32 @@
 <body class="flex column alignCenter">
     <h1>ROCK! PAPER! SCISSORS!</h1>
     <h1>SCORE</h1>
-    <div id="scoreboard" class="flex column alignCenter">
-        <div id="players" class="flex spaceAround">
-            <h3>HUMAN PLAYER</h3>
-            <div class="spacer"></div>
-            <h3>COMPUTER PLAYER</h3>
+    <div id="scoreSection" class="flex">
+        <div id="resultsLeft" class="flex column">
+            <h2 id="matchResultLeft" class="textAlignRight"></h2>
+            <h2 id="matchDetailsLeft" class="textAlignRight"></h2>
+            <h1 id="gameResultLeft" class="textAlignRight"></h1>
         </div>
-        <div id="score" class="flex spaceAround">
-            <h1 id="humanScore">0</h1>
-            <h1>-</h1>
-            <h1 id="computerScore">0</h1>
+        <div id="scoreboard" class="flex column alignCenter">
+            <div id="players" class="flex spaceAround">
+                <h3>HUMAN PLAYER</h3>
+                <div class="spacer"></div>
+                <h3>COMPUTER PLAYER</h3>
+            </div>
+            <div id="score" class="flex spaceAround">
+                <h1 id="humanScore">0</h1>
+                <h1>-</h1>
+                <h1 id="computerScore">0</h1>
+            </div>
+            <h3>FIRST TO FIVE</h3>        
         </div>
-        <h3>FIRST TO FIVE</h3>        
+        <div id="resultsRight" class="flex column">
+            <h2 id="matchResultRight"></h2>
+            <h2 id="matchDetailsRight"></h2>
+            <h1 id="gameResultRight"></h1>
+        </div>
     </div>
-    <h3 id="matchResult"></h3>
-    <h3 id="gameResult"></h3>
-    <h2>CHOOSE YOUR FATE!</h2>
+    <h1 id="buttonHeader">CHOOSE YOUR FATE!</h1>
     <div id="buttons" class="flex">
         <button id="rock" class="humanSelection">ROCK</button>
         <button id="paper" class="humanSelection">PAPER</button>
