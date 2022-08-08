@@ -31,7 +31,7 @@ body {
     width: 30%;
 }
 
-#playerChoices {
+#buttons {
     justify-content: center;
     gap: 32px;
 }
