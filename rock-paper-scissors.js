@@ -54,17 +54,17 @@ function capitalize(string) {
     return "" + start + rest;
 }
 
-function game() {
-    let computerWins = 0;
-    let playerWins = 0;
-    for (let i = 0, score = "00"; i < 5; i++) {
-        score = playRound();
-        computerWins += +score[0];
-        playerWins += +score[1];
-        console.log(`Score: ${playerWins} to ${computerWins}`)     
-    }
-    showResult(computerWins, playerWins)
-}
+// function game() {
+//     let computerWins = 0;
+//     let playerWins = 0;
+//     for (let i = 0, score = "00"; i < 5; i++) {
+//         score = playRound();
+//         computerWins += +score[0];
+//         playerWins += +score[1];
+//         console.log(`Score: ${playerWins} to ${computerWins}`)     
+//     }
+//     showResult(computerWins, playerWins)
+// }
 
 
 function showResult(computerWins, playerWins) {
