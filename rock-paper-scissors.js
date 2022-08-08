@@ -9,21 +9,10 @@ const gameResultRight = document.querySelector('#gameResultRight');
 const buttonHeader = document.querySelector('#buttonHeader');
 const buttons = document.querySelector('#buttons');
 
-const paperWin = "Paper covers rock";
-const scissorsWin = "Scissors cut paper";
-const rockWin = "Rock smashes scissors";
-
-const game = {};
-game.computerWins = 0;
-game.humanWins = 0;
-
+const game = {computerWins:0, humanWins:0};
 
 function playRound(humanSelection, computerSelection) {
-    score = getWinner(humanSelection, computerSelection);
-    game.computerWins += +score[0];
-    game.humanWins += +score[1];
-    computerScore.textContent = game.computerWins;
-    humanScore.textContent = game.humanWins;   
+    updateScore(humanSelection, computerSelection);
     if (game.computerWins >= 5 || game.humanWins >= 5) {
     showResult(game.computerWins, game.humanWins);
     removeButtons();
@@ -31,9 +20,18 @@ function playRound(humanSelection, computerSelection) {
     }
 }
 
-function getWinner(humanSelection, computerSelection) {
-    // humanSelection = prompt("Choose your fate!");
-    // humanSelection = capitalize(humanSelection);
+function updateScore(humanSelection, computerSelection) {
+    score = rockPaperScissors(humanSelection, computerSelection);
+    game.computerWins += +score[0];
+    game.humanWins += +score[1];
+    computerScore.textContent = game.computerWins;
+    humanScore.textContent = game.humanWins;
+}
+
+function rockPaperScissors(humanSelection, computerSelection) {
+    const paperWin = "Paper covers rock";
+    const scissorsWin = "Scissors cut paper";
+    const rockWin = "Rock smashes scissors";
     computerSelection = computerPlay();
     if (humanSelection === computerSelection) {
         matchResultLeft.textContent = `EVERYONE WINS!`;
