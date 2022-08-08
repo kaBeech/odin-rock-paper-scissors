@@ -34,7 +34,7 @@ function getWinner(humanSelection, computerSelection) {
     // humanSelection = capitalize(humanSelection);
     computerSelection = computerPlay();
     if (humanSelection === computerSelection) {
-        matchResult.textContent = `Everyone wins! Both humans chose ${computerSelection.toLowerCase()}`;
+        matchResult.textContent = `Everyone wins! Both players chose ${computerSelection.toLowerCase()}`;
         return "11";
     } else if (humanSelection === "rock" && computerSelection === "scissors") {
         matchResult.textContent = `You win! ${rockWin}`;

@@ -42,3 +42,8 @@ body {
     justify-content: center;
     gap: 32px;
 }
+
+.humanSelection {
+    background-color: 111;
+    color: #ddd;
+}
