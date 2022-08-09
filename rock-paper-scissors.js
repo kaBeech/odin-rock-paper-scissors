@@ -26,62 +26,6 @@ function updateScore(humanSelection, computerSelection) {
     humanScore.textContent = game.humanWins;
 }
 
-// function rockPaperScissors(humanSelection, computerSelection) {
-//     const paperWin = "Paper covers rock";
-//     const scissorsWin = "Scissors cut paper";
-//     const rockWin = "Rock smashes scissors";
-//     computerSelection = computerPlay();
-//     if (humanSelection === computerSelection) {
-//         matchResultLeft.textContent = `EVERYONE WINS!`;
-//         matchResultRight.textContent = `EVERYONE WINS!`;
-//         matchDetailsLeft.textContent = `Both players chose ${computerSelection.toLowerCase()}`;
-//         matchDetailsRight.textContent = `Both players chose ${computerSelection.toLowerCase()}`;
-//         return "11";
-//     } else if (humanSelection === "rock" && computerSelection === "scissors") {
-//         matchResultLeft.textContent = `YOU WIN!`;
-//         matchResultRight.textContent = `YOU WIN!`;
-//         matchDetailsLeft.textContent = `${rockWin}`;
-//         matchDetailsRight.textContent = `${rockWin}`;
-//          return "01";
-//     } else if (humanSelection === "paper" && computerSelection === "rock") {
-//         matchResultLeft.textContent = `YOU WIN!`;
-//         matchResultRight.textContent = `YOU WIN!`;
-//         matchDetailsLeft.textContent = `${paperWin}`;
-//         matchDetailsRight.textContent = `${paperWin}`;
-//          return "01";
-//     } else if (humanSelection === "scissors" && computerSelection === "paper") {
-//         matchResultLeft.textContent = `YOU WIN!`;
-//         matchResultRight.textContent = `YOU WIN!`;
-//         matchDetailsLeft.textContent = `${scissorsWin}`;
-//         matchDetailsRight.textContent = `${scissorsWin}`;
-//          return "01";
-//     } else if (humanSelection === "scissors" && computerSelection === "rock") {
-//         matchResultLeft.textContent = `COMPUTER WINS!`;
-//         matchResultRight.textContent = `COMPUTER WINS!`;
-//         matchDetailsLeft.textContent = `${rockWin}`;
-//         matchDetailsRight.textContent = `${rockWin}`;
-//          return "10";
-//     } else if (humanSelection === "rock" && computerSelection === "paper") {
-//         matchResultLeft.textContent = `COMPUTER WINS!`;
-//         matchResultRight.textContent = `COMPUTER WINS!`;
-//         matchDetailsLeft.textContent = `${paperWin}`;
-//         matchDetailsRight.textContent = `${paperWin}`;
-//         return "10";
-//     } else if (humanSelection === "paper" && computerSelection === "scissors") {
-//         matchResultLeft.textContent = `COMPUTER WINS!`;
-//         matchResultRight.textContent = `COMPUTER WINS!`;
-//         matchDetailsLeft.textContent = `${scissorsWin}`;
-//         matchDetailsRight.textContent = `${scissorsWin}`;
-//         return "10";
-//     } else {
-//         matchResultLeft.textContent = "Try Again!";
-//         matchResultRight.textContent = "Try Again!";
-//         matchDetailsLeft.textContent = "Try Again!";
-//         matchDetailsRight.textContent = "Try Again!";
-//         return "00";
-//     }
-// }
-
 function rockPaperScissors(humanSelection, computerSelection) {
     const paperWin = "Paper covers rock";
     const scissorsWin = "Scissors cut paper";

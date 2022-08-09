@@ -4,7 +4,6 @@ const resultsRightSet = document.querySelector('#resultsRight');
 const resultsMobileSet = document.querySelector('#resultsMobile');
 
 if (window.outerWidth < window.outerHeight) {
-    console.log(resultsLeftSet);
     styleSet.setAttribute("href", "./styleMobile.css");
     while (resultsLeftSet.hasChildNodes()) {
         resultsLeftSet.removeChild(resultsLeftSet.firstChild);
