@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="./style.css">
+    <link id="style" rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/x-icon" href="./RockPaperScissors.png">
+    <script src="viewSetter.js" defer></script>
     <script src="./rock-paper-scissors.js" defer></script>
 </head>
 <body class="flex column alignCenter">
-    <h1>ROCK! PAPER! SCISSORS!</h1>
+    <h1 id="title">ROCK! PAPER! SCISSORS!</h1>
     <h1>SCORE</h1>
     <div id="scoreSection" class="flex">
         <div id="resultsLeft" class="flex column">
-            <h2 id="matchResultLeft" class="textAlignRight"></h2>
-            <h2 id="matchDetailsLeft" class="textAlignRight"></h2>
-            <h1 id="gameResultLeft" class="textAlignRight"></h1>
+            <h2 class="matchResult textAlignRight"></h2>
+            <h2 class="matchDetails textAlignRight"></h2>
+            <h1 class="gameResult textAlignRight"></h1>
         </div>
         <div id="scoreboard" class="flex column alignCenter">
             <div id="players" class="flex spaceAround">
@@ -29,15 +30,16 @@
                 <h1>-</h1>
                 <h1 id="computerScore">0</h1>
             </div>
-            <h3>FIRST TO FIVE</h3>        
+            <h3 id="rules" class="gameResult">FIRST TO FIVE</h3>        
         </div>
         <div id="resultsRight" class="flex column">
-            <h2 id="matchResultRight"></h2>
-            <h2 id="matchDetailsRight"></h2>
-            <h1 id="gameResultRight"></h1>
+            <h2 class="matchResult"></h2>
+            <h2 class="matchDetails"></h2>
+            <h1 class="gameResult"></h1>
         </div>
     </div>
-    <h1 id="buttonHeader">CHOOSE YOUR FATE!</h1>
+    <div id="resultsMobile"></div>
+    <h1 id="buttonHeader" class="gameResult">CHOOSE YOUR FATE!</h1>
     <div id="buttons" class="flex">
         <button id="rock" class="humanSelection">ROCK</button>
         <button id="paper" class="humanSelection">PAPER</button>
