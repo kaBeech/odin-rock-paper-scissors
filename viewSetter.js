@@ -3,7 +3,7 @@ const resultsLeftSet = document.querySelector('#resultsLeft');
 const resultsRightSet = document.querySelector('#resultsRight');
 const resultsMobileSet = document.querySelector('#resultsMobile');
 
-if (window.outerWidth < window.outerHeight) {
+if (window.outerWidth * 1.3 < window.outerHeight) {
     styleSet.setAttribute("href", "./styleMobile.css");
     while (resultsLeftSet.hasChildNodes()) {
         resultsLeftSet.removeChild(resultsLeftSet.firstChild);
