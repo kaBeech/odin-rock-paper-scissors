@@ -13,6 +13,7 @@
 .textAlignRight {
     text-align: right;
 }
+
 .spaceAround {
     width: 100%;
     justify-content: space-around;
@@ -53,5 +54,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
